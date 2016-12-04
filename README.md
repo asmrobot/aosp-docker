@@ -68,6 +68,6 @@ android-7.1.0_r7
 
 示例：
 生成image:docker build -t ztaosp/jdk6 .
-checkout: docker run -ti -v /home/asmrobot/aosp/android-4.4.2_r2:/aosp ztaosp/jdk6 /aosp.sh git://192.168.2.111/platform/manifest.git android-4.4.2_r2
-编译全部： docker run -ti -v /home/asmrobot/aosp/android-4.4.2_r2:/aosp ztaosp/jdk6 /aosp.sh build-all aosp_arm-eng
-编译KEYE： docker run -ti -v /home/asmrobot/aosp/android-4.4.2_r2:/aosp -v /home/asmrobot/aquarius_native:/app -v /home/asmrobot/keye:/artifacts ztaosp/jdk6 /aosp.sh build aosp_arm-eng  keye
+checkout: docker run -ti --rm -v /home/asmrobot/aosp/android-4.4.2_r2:/aosp ztaosp/jdk6 /aosp.sh git://192.168.2.111/platform/manifest.git android-4.4.2_r2
+编译全部： docker run -ti --rm -v /home/asmrobot/aosp/android-4.4.2_r2:/aosp ztaosp/jdk6 /aosp.sh build-all aosp_arm-eng
+编译KEYE： docker run -ti --rm -v /home/asmrobot/aosp/android-4.4.2_r2:/aosp -v /home/asmrobot/aquarius_native:/app -v /home/asmrobot/keye:/artifacts ztaosp/jdk6 /aosp.sh build aosp_arm-eng  keye

@@ -42,9 +42,9 @@ command="$1"
 
 case "$command" in
   checkout-branch)
-    manifest="$1"
-    branch="$2"
-    shift; shift
+    manifest="$2"
+    branch="$3"
+    shift; shift;shift
     cd "$AOSP_PATH"
     test -d .repo || repo init -u "$manifest" -b "$branch"
     repo sync "$@"
