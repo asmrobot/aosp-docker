@@ -70,7 +70,9 @@ case "$command" in
     module_path="$AOSP_PATH/external/MY_$module/"
     rm -rf "$module_path"
     cp -R "$APP_PATH/" "$module_path"
-    make "$module" -j $(nproc) "$@"
+#    make "$module" -j $(nproc) "$@"
+    cd "$module_path"
+    mm
     artifacts=(
       "$OUT/obj/STATIC_LIBRARIES/${module}_intermediates/${module}.a"
       "$OUT/system/lib/${module}.so"
